@@ -1,0 +1,158 @@
+{
+  "info": {
+    "name": "Project Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Projects",
+      "item": [
+        {
+          "name": "1. Create Project",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/projects",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"projectName\":\"Website Redesign\",\"description\":\"Redesign company website\",\"startDate\":\"2026-01-01\",\"endDate\":\"2026-12-31\",\"projectStatus\":\"ACTIVE\"}"
+            }
+          }
+        },
+        {
+          "name": "2. Get Project by ID",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/projects/1"
+          }
+        },
+        {
+          "name": "3. Get All Projects",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/projects?page=0&size=10&sortBy=projectId"
+          }
+        },
+        {
+          "name": "4. Update Project",
+          "request": {
+            "method": "PUT",
+            "url": "http://localhost:8080/api/projects/1",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"projectName\":\"Website Redesign V2\",\"description\":\"Updated description\",\"startDate\":\"2026-01-01\",\"endDate\":\"2026-12-31\",\"projectStatus\":\"IN_PROGRESS\"}"
+            }
+          }
+        },
+        {
+          "name": "5. Delete Project",
+          "request": {
+            "method": "DELETE",
+            "url": "http://localhost:8080/api/projects/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Team Members",
+      "item": [
+        {
+          "name": "1. Create Team Member",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/members",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"John Doe\",\"email\":\"john@example.com\",\"role\":\"DEVELOPER\",\"department\":\"Engineering\"}"
+            }
+          }
+        },
+        {
+          "name": "2. Get Member by ID",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/members/1"
+          }
+        },
+        {
+          "name": "3. Get All Members",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/members"
+          }
+        },
+        {
+          "name": "4. Update Member",
+          "request": {
+            "method": "PUT",
+            "url": "http://localhost:8080/api/members/1",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"John Doe\",\"email\":\"john@example.com\",\"role\":\"LEAD\",\"department\":\"Engineering\"}"
+            }
+          }
+        },
+        {
+          "name": "5. Delete Member",
+          "request": {
+            "method": "DELETE",
+            "url": "http://localhost:8080/api/members/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tasks",
+      "item": [
+        {
+          "name": "1. Create Task",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/tasks",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"taskTitle\":\"Design Homepage\",\"description\":\"Create wireframes\",\"priority\":\"HIGH\",\"status\":\"TODO\",\"dueDate\":\"2026-06-30\",\"projectId\":1,\"memberId\":1}"
+            }
+          }
+        },
+        {
+          "name": "2. Get Task by ID",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/tasks/1"
+          }
+        },
+        {
+          "name": "3. Get All Tasks",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/tasks?page=0&size=10&sortBy=taskId"
+          }
+        },
+        {
+          "name": "4. Update Task",
+          "request": {
+            "method": "PUT",
+            "url": "http://localhost:8080/api/tasks/1",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"taskTitle\":\"Design Homepage\",\"description\":\"Wireframes completed\",\"priority\":\"HIGH\",\"status\":\"IN_PROGRESS\",\"dueDate\":\"2026-06-30\",\"projectId\":1,\"memberId\":1}"
+            }
+          }
+        },
+        {
+          "name": "5. Delete Task",
+          "request": {
+            "method": "DELETE",
+            "url": "http://localhost:8080/api/tasks/1"
+          }
+        }
+      ]
+    }
+  ]
+}
