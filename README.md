@@ -18,7 +18,8 @@ A RESTful backend system built with Spring Boot and PostgreSQL for managing proj
 ## Setup Instructions
 
 ### 1. Clone the repository
-git clone https://github.com/Niroja76/ProjectManagement.git
+git clone [https://github.com/Niroja76/ProjectManagement.git](https://github.com/Niroja76/Assignment-ProjectManagementSystem.git)
+
 cd ProjectManagement
 
 ### 2. Create the database
